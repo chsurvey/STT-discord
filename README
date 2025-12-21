@@ -1,0 +1,55 @@
+# Discord Real-time Translation Bot
+
+Real-time speech translation for Discord voice channels. Captures audio + VAD in one process and runs ASR + Korean translation on a GPU worker for low-latency results.
+
+## Demo
+```html
+<video src="assets/demo.mp4" controls width="100%"></video>
+```
+
+## Features
+- **Low-latency pipeline**: audio capture and inference run in separate processes
+- **VAD chunking**: ignores silence and splits on pauses
+- **Local inference** (no external APIs):
+  - **ASR**: Faster-Whisper (CTranslate2, FP16)
+  - **Translation**: Llama.cpp + Qwen2.5-1.5B (GGUF, 4-bit)
+
+## Architecture
+- **Process 1 (Discord Bot)**: audio capture + VAD → sends speech chunks to worker
+- **Process 2 (GPU Worker)**: Faster-Whisper ASR → Llama.cpp translation → outputs Korean text
+
+## Acceleration
+- **VAD + multiprocessing**: prevents audio drop while inference runs
+- **Faster-Whisper (CTranslate2, FP16)**: faster ASR than vanilla Whisper
+- **Llama.cpp (GGUF q4_k_m + GPU offload)**: lower memory + improved latency
+
+## Requirements
+- Python **3.8+**
+- **FFmpeg**
+- NVIDIA GPU with CUDA (**recommended** for real-time performance)
+
+## Installation
+```bash
+pip install discord.py python-dotenv pydub faster-whisper llama-cpp-python numpy
+```
+
+### Models
+Place a GGUF model in `./models/`, for example:
+- `qwen2.5-1.5b-instruct-q4_k_m.gguf`
+
+## Configuration
+Create a `.env` file in the project root:
+```env
+DISCORD_BOT_TOKEN=your_token_here
+```
+
+## Run
+```bash
+python bot_local.py
+```
+
+## Discord Commands
+- !translate [lang] — join your current voice channel and start translating
+    - !translate en (English → Korean)
+    - !translate auto (auto-detect)
+- !leave — stop and disconnect
