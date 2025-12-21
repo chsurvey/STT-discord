@@ -1,0 +1,32 @@
+{
+  "config": {
+    "audio_path": "/home/gos/STT-discord/ablation2_en.wav",
+    "text_prompt": "Hello, today I present the \"Ultra-Low Latency Local AI Translation System\" powered by GPU acceleration. This system operates solely on local resources without relying on external APIs. This approach eliminates API costs, strengthens data security, and minimizes network latency.",
+    "voice": "en-US-AriaNeural",
+    "model_size": "medium",
+    "device": "cuda",
+    "compute_type": "float16",
+    "language": "en",
+    "beam_size": 5
+  },
+  "results": [
+    {
+      "name": "whisper",
+      "model": "medium",
+      "device": "cuda",
+      "load_s": 9.96553687704727,
+      "transcribe_s": 2.3859197422862053,
+      "text": "Hello, today I present the Ultralow Latency Local AI Translation System powered by GPU Acceleration. This system operates solely on local resources without relying on external APIs. This approach eliminates API costs, strengthens data security, and minimizes network latency."
+    },
+    {
+      "name": "faster_whisper",
+      "model": "medium",
+      "device": "cuda",
+      "compute_type": "float16",
+      "language": "en",
+      "load_s": 1.2279420988634229,
+      "transcribe_s": 0.6235301843844354,
+      "text": "Hello, today I present the Ultralow Latency Local AI Translation System powered by GPU Acceleration.  This system operates solely on local resources without relying on external APIs.  This approach eliminates API costs, strengthens data security, and minimizes network latency."
+    }
+  ]
+}

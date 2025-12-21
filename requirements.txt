@@ -1,0 +1,15 @@
+discord.py
+edge-tts
+faster-whisper
+huggingface-hub
+llama-cpp-python
+psutil
+pydub
+python-dotenv
+sounddevice
+soundfile
+torch
+transformers
+ffmpeg
+pynvml
+cudnn

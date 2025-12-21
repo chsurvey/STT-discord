@@ -1,7 +1,4 @@
 import asyncio
-import edge_tts
-import sounddevice as sd
-import soundfile as sf
 import os
 
 # ==========================================
@@ -35,6 +32,9 @@ playlist = [
 ]
 
 async def prepare_and_play_manual():
+    import edge_tts
+    import sounddevice as sd
+    import soundfile as sf
     print("=== [준비 단계] 오디오 미리 생성 중... ===")
     
     # 생성된 오디오 데이터를 담아둘 리스트

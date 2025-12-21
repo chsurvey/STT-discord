@@ -1,0 +1,351 @@
+{
+  "config": {
+    "sample_text": "Hello, today I present the \"Ultra-Low Latency Local AI Translation System\" powered by GPU acceleration. This system operates solely on local resources without relying on external APIs. This approach eliminates API costs, strengthens data security, and minimizes network latency.",
+    "prompt_template": "<|im_start|>system\nYou are a professional translator. Translate the user input into natural Korean.<|im_end|>\n<|im_start|>user\n{input_text}<|im_end|>\n<|im_start|>assistant\n",
+    "stop_strings": [
+      "<|im_end|>",
+      "\n"
+    ],
+    "max_tokens": 128,
+    "temperature": 0.0,
+    "n_samples": 10,
+    "warmup_runs": 1,
+    "n_ctx": 4096,
+    "n_gpu_layers": 9999
+  },
+  "cases": [
+    {
+      "name": "llama_cpp_q8_0",
+      "model_path": "/home/gos/STT-discord/models/qwen2.5-1.5b-instruct-q8_0.gguf",
+      "base_rss_mb": 1557.5546875,
+      "base_vram_mb": 758.0,
+      "rss_peak_mb_max": 1560.3984375,
+      "vram_peak_mb": 758.0,
+      "cpu_peak_percent_max": 119.4,
+      "latency_p50_s": 0.5872235558927059,
+      "tokens_per_sec_p50": 134.53138837846416,
+      "samples": [
+        {
+          "sample_idx": 0,
+          "latency_s": 0.5852313316427171,
+          "gen_tokens": 79,
+          "tokens_per_sec": 134.989355026927,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1557.7734375
+        },
+        {
+          "sample_idx": 1,
+          "latency_s": 0.5861368263140321,
+          "gen_tokens": 79,
+          "tokens_per_sec": 134.78081644655867,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        },
+        {
+          "sample_idx": 2,
+          "latency_s": 0.5870646242983639,
+          "gen_tokens": 79,
+          "tokens_per_sec": 134.56780860270302,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        },
+        {
+          "sample_idx": 3,
+          "latency_s": 0.5871896878816187,
+          "gen_tokens": 79,
+          "tokens_per_sec": 134.53914745166117,
+          "cpu_peak_percent": 99.6,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        },
+        {
+          "sample_idx": 4,
+          "latency_s": 0.5986717836931348,
+          "gen_tokens": 79,
+          "tokens_per_sec": 131.95878301238523,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        },
+        {
+          "sample_idx": 5,
+          "latency_s": 0.5926297209225595,
+          "gen_tokens": 79,
+          "tokens_per_sec": 133.30414795433984,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        },
+        {
+          "sample_idx": 6,
+          "latency_s": 0.5935213319025934,
+          "gen_tokens": 79,
+          "tokens_per_sec": 133.10389324467482,
+          "cpu_peak_percent": 99.7,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        },
+        {
+          "sample_idx": 7,
+          "latency_s": 0.5872574239037931,
+          "gen_tokens": 79,
+          "tokens_per_sec": 134.52362930526715,
+          "cpu_peak_percent": 99.6,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        },
+        {
+          "sample_idx": 8,
+          "latency_s": 0.585127579048276,
+          "gen_tokens": 79,
+          "tokens_per_sec": 135.01329082538786,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        },
+        {
+          "sample_idx": 9,
+          "latency_s": 0.5933166150934994,
+          "gen_tokens": 79,
+          "tokens_per_sec": 133.14981915271423,
+          "cpu_peak_percent": 99.6,
+          "vram_peak_mb": 758.0,
+          "rss_peak_mb": 1560.3984375
+        }
+      ]
+    },
+    {
+      "name": "llama_cpp_q4_k_m",
+      "model_path": "/home/gos/STT-discord/models/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "base_rss_mb": 1473.9765625,
+      "base_vram_mb": 598.0,
+      "rss_peak_mb_max": 1473.9765625,
+      "vram_peak_mb": 598.0,
+      "cpu_peak_percent_max": 119.4,
+      "latency_p50_s": 0.5415203073062003,
+      "tokens_per_sec_p50": 149.57897175869596,
+      "samples": [
+        {
+          "sample_idx": 0,
+          "latency_s": 0.5325909089297056,
+          "gen_tokens": 81,
+          "tokens_per_sec": 152.08671166163455,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 1,
+          "latency_s": 0.5427943030372262,
+          "gen_tokens": 81,
+          "tokens_per_sec": 149.22780056231508,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 2,
+          "latency_s": 0.5567273823544383,
+          "gen_tokens": 81,
+          "tokens_per_sec": 145.4931130878554,
+          "cpu_peak_percent": 99.6,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 3,
+          "latency_s": 0.5419489587657154,
+          "gen_tokens": 81,
+          "tokens_per_sec": 149.46056946852872,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 4,
+          "latency_s": 0.5407972768880427,
+          "gen_tokens": 81,
+          "tokens_per_sec": 149.7788606963878,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 5,
+          "latency_s": 0.5410916558466852,
+          "gen_tokens": 81,
+          "tokens_per_sec": 149.69737404886322,
+          "cpu_peak_percent": 99.6,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 6,
+          "latency_s": 0.5484901205636561,
+          "gen_tokens": 81,
+          "tokens_per_sec": 147.67813851735437,
+          "cpu_peak_percent": 99.6,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 7,
+          "latency_s": 0.5407180250622332,
+          "gen_tokens": 81,
+          "tokens_per_sec": 149.8008134474108,
+          "cpu_peak_percent": 99.7,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 8,
+          "latency_s": 0.5420548710972071,
+          "gen_tokens": 81,
+          "tokens_per_sec": 149.43136630437957,
+          "cpu_peak_percent": 99.6,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        },
+        {
+          "sample_idx": 9,
+          "latency_s": 0.5401489180512726,
+          "gen_tokens": 81,
+          "tokens_per_sec": 149.95864527921026,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 598.0,
+          "rss_peak_mb": 1473.9765625
+        }
+      ]
+    },
+    {
+      "name": "transformers_base",
+      "model_path": "/home/gos/STT-discord/models/qwen2.5-1.5b-instruct",
+      "base_rss_mb": 3237.74609375,
+      "base_vram_mb": 3160.0,
+      "base_vram_nvml_mb": 174.0,
+      "base_vram_torch_reserved_mb": 3160.0,
+      "rss_peak_mb_max": 3237.74609375,
+      "vram_peak_mb": 3160.0,
+      "torch_peak_allocated_mb_max": 2963.19921875,
+      "torch_peak_reserved_mb_max": 3160.0,
+      "cpu_peak_percent_max": 119.7,
+      "latency_p50_s": 1.89135135198012,
+      "tokens_per_sec_p50": 44.94482699129237,
+      "samples": [
+        {
+          "sample_idx": 0,
+          "latency_s": 1.9832648541778326,
+          "gen_tokens": 85,
+          "tokens_per_sec": 42.85862264989159,
+          "cpu_peak_percent": 119.5,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19775390625,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 1,
+          "latency_s": 2.0350577090866864,
+          "gen_tokens": 85,
+          "tokens_per_sec": 41.767857304718476,
+          "cpu_peak_percent": 99.7,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 2,
+          "latency_s": 1.8487368198111653,
+          "gen_tokens": 85,
+          "tokens_per_sec": 45.97733927789793,
+          "cpu_peak_percent": 119.3,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 3,
+          "latency_s": 1.9545511491596699,
+          "gen_tokens": 85,
+          "tokens_per_sec": 43.48824538899608,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 4,
+          "latency_s": 1.8748644599691033,
+          "gen_tokens": 85,
+          "tokens_per_sec": 45.336610626989405,
+          "cpu_peak_percent": 99.8,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 5,
+          "latency_s": 1.84430443495512,
+          "gen_tokens": 85,
+          "tokens_per_sec": 46.087835819832215,
+          "cpu_peak_percent": 119.3,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 6,
+          "latency_s": 1.8639277499169111,
+          "gen_tokens": 85,
+          "tokens_per_sec": 45.602625962186075,
+          "cpu_peak_percent": 119.2,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 7,
+          "latency_s": 1.9078382439911366,
+          "gen_tokens": 85,
+          "tokens_per_sec": 44.55304335559535,
+          "cpu_peak_percent": 119.6,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 8,
+          "latency_s": 1.8622910319827497,
+          "gen_tokens": 85,
+          "tokens_per_sec": 45.642704894251644,
+          "cpu_peak_percent": 119.7,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        },
+        {
+          "sample_idx": 9,
+          "latency_s": 1.946139717940241,
+          "gen_tokens": 85,
+          "tokens_per_sec": 43.67620639794683,
+          "cpu_peak_percent": 119.4,
+          "vram_peak_mb": 174.0,
+          "rss_peak_mb": 3237.74609375,
+          "torch_peak_allocated_mb": 2963.19921875,
+          "torch_peak_reserved_mb": 3160.0
+        }
+      ]
+    }
+  ]
+}
