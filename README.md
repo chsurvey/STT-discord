@@ -3,9 +3,7 @@
 Real-time speech translation for Discord voice channels. Captures audio + VAD in one process and runs ASR + Korean translation on a GPU worker for low-latency results.
 
 ## Demo
-```html
-<video src="assets/demo.mp4" controls width="100%"></video>
-```
+[▶️ Watch the demo](./assets/demo.mp4)
 
 ## Features
 - **Low-latency pipeline**: audio capture and inference run in separate processes
